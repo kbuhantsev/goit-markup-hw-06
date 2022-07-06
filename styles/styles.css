@@ -792,26 +792,6 @@ img {
   padding: 40px;
 }
 
-.input-wrapper {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-}
-
-.input_icon {
-  position: absolute;
-  left: 12px;
-  top: 11px;
-}
-
-.input-wrapper:hover .text-input,
-.input-wrapper:focus .text-input,
-.input-wrapper:hover .input_icon,
-.input-wrapper:focus .input_icon {
-  border-color: var(--accent-blue-color);
-  fill: var(--accent-blue-color);
-}
-
 .button-close {
   display: inline-flex;
   justify-content: center;
@@ -851,9 +831,21 @@ img {
 }
 
 .input-lable {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
   margin-bottom: 4px;
   letter-spacing: 0.01em;
   color: var(--main-grey-color);
+}
+
+.input-lable:hover .text-input,
+.input-lable:focus .text-input,
+.input-lable:hover .input_icon,
+.input-lable:focus .input_icon {
+  border-color: var(--accent-blue-color);
+  fill: var(--accent-blue-color);
 }
 
 .text-input {
@@ -867,6 +859,10 @@ img {
 }
 
 .input_icon {
+  position: absolute;
+  left: 12px;
+  top: 11px;
+
   transition: fill 250ms var(--main-time-func);
 }
 
