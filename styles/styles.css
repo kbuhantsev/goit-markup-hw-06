@@ -835,7 +835,6 @@ img {
   display: flex;
   flex-direction: column;
 
-  margin-bottom: 4px;
   letter-spacing: 0.01em;
   color: var(--main-grey-color);
 }
@@ -846,6 +845,10 @@ img {
 .input-lable:focus .input_icon {
   border-color: var(--accent-blue-color);
   fill: var(--accent-blue-color);
+}
+
+.label-title {
+  padding-bottom: 4px;
 }
 
 .text-input {
@@ -861,7 +864,7 @@ img {
 .input_icon {
   position: absolute;
   left: 12px;
-  top: 11px;
+  top: 30px;
 
   transition: fill 250ms var(--main-time-func);
 }
@@ -886,27 +889,28 @@ img {
 }
 
 .agreement {
+  align-self: center;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-}
-
-.agreement-wrapper {
   margin-bottom: 30px;
 }
 
-.agreement .input-lable {
+.agreement-text {
   margin-left: 7px;
   margin-bottom: 0;
   letter-spacing: 0.03em;
+  color: var(--main-grey-color);
 }
 
 .agreement-link {
+  margin-left: 5px;
   text-decoration: underline;
   color: var(--accent-blue-color);
 }
 
 .btn-submit {
+  align-self: center;
   display: inline-block;
 
   height: 50px;

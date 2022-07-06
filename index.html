@@ -519,37 +519,34 @@
         <form name="order-form" class="call-order-form" autocomplete="on">
           <p class="order-title">Оставьте свои данные, мы вам перезвоним</p>
 
-          <label for="name-input" class="input-lable" required
-            >Имя
-            <div class="input-wrapper">
-              <input type="text" name="name-input" id="name-input" class="text-input" />
-              <svg class="input_icon" width="18" height="18">
-                <use href="./images/svg/sprite.svg#face"></use>
-              </svg>
-            </div>
+          <label class="input-lable" required
+            ><span class="label-title">Имя</span>
+            <input type="text" name="name-input" class="text-input" />
+            <svg class="input_icon" width="18" height="18">
+              <use href="./images/svg/sprite.svg#face"></use>
+            </svg>
           </label>
 
-          <label for="phone-input" class="input-lable" required
-            >Телефон
-            <input type="text" name="phone-input" id="phone-input" class="text-input" />
+          <label class="input-lable" required
+            ><span class="label-title">Телефон</span>
+            <input type="text" name="phone-input" class="text-input" />
             <svg class="input_icon" width="18" height="18">
               <use href="./images/svg/sprite.svg#phone"></use>
             </svg>
           </label>
 
-          <label for="email-input" class="input-lable" required
-            >Почта
-            <input type="email" name="email-input" id="email-input" class="text-input" />
+          <label class="input-lable" required
+            ><span class="label-title">Почта</span>
+            <input type="email" name="email-input" class="text-input" />
             <svg class="input_icon" width="18" height="18">
               <use href="./images/svg/sprite.svg#envelop-black"></use>
             </svg>
           </label>
 
-          <label for="comment-input" class="input-lable"
-            >Комментарий
+          <label class="input-lable"
+            ><span class="label-title">Комментарий</span>
             <textarea
               name="comment-input"
-              id="comment-input"
               rows="5"
               placeholder="Введите текст"
               class="text-input text-area"
@@ -557,18 +554,13 @@
           </label>
 
           <div class="agreement">
-            <div class="agreement-wrapper">
-              <input type="checkbox" name="agreement-checkbox" id="agreement-checkbox" />
-              <label for="agreement-checkbox" class="input-lable"
-                >Соглашаюсь с рассылкой и принимаю
-                <a href="#" class="agreement-link">Условия договора</a></label
-              >
-            </div>
-
-            <div>
-              <button type="submit" class="button btn-submit">Отправить</button>
-            </div>
+            <input type="checkbox" name="agreement-checkbox" id="agreement-checkbox" />
+            <label for="agreement-checkbox" class="agreement-text"
+              >Соглашаюсь с рассылкой и принимаю
+            </label>
+            <a href="#" class="agreement-link">Условия договора</a>
           </div>
+          <button type="submit" class="button btn-submit">Отправить</button>
         </form>
       </div>
     </div>
