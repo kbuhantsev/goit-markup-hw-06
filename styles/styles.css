@@ -879,8 +879,13 @@ img {
   line-height: calc(14 / 12);
   letter-spacing: 0.01em;
 
-  color: rgba(117, 117, 117, 0.5);
+  color: var(--main-grey-color);
+
   transition: border-color 250ms var(--main-time-func);
+}
+
+.text-area::placeholder {
+  color: rgba(117, 117, 117, 0.5);
 }
 
 .text-area:hover,
@@ -896,7 +901,33 @@ img {
   margin-bottom: 30px;
 }
 
-.agreement-text {
+.checkbox-icon {
+  display: inline-block;
+  content: '';
+  width: 16px;
+  height: 15px;
+  margin-right: 5px;
+
+  border: 2px solid #000000;
+  border-radius: 2px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+  transition-property: background-color, border-color;
+  transition-duration: 250ms;
+  transition-timing-function: linear;
+}
+
+.agreement-checkbox:checked + .checkbox-icon {
+  background-color: var(--accent-blue-color);
+  background-image: url('../images/svg/icon-check.svg');
+  background-size: contain;
+  border-color: var(--accent-blue-color);
+  background-origin: border-box;
+}
+
+.agreement-label {
+  display: inline-flex;
   margin-left: 7px;
   margin-bottom: 0;
   letter-spacing: 0.03em;
