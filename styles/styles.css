@@ -808,16 +808,17 @@ img {
   height: 30px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+
   fill: black;
 
-  transition: fill 250ms var(--main-time-func);
+  transition: fill 250ms var(--main-time-func), box-shadow 250ms var(--main-time-func);
 }
 
 .button-close:hover,
 .button-close:focus {
   fill: var(--accent-blue-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .order-title {
@@ -831,10 +832,7 @@ img {
 }
 
 .input-lable {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-
+  font-size: 12px;
   letter-spacing: 0.01em;
   color: var(--main-grey-color);
 }
@@ -847,13 +845,18 @@ img {
   fill: var(--accent-blue-color);
 }
 
-.label-title {
-  padding-bottom: 4px;
+.input-wrapper {
+  display: flex;
+  position: relative;
+  margin-top: 4px;
+  margin-bottom: 10px;
 }
 
 .text-input {
+  flex-grow: 1;
+  display: block;
   height: 40px;
-  margin-bottom: 10px;
+
   padding-left: 35px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -861,10 +864,15 @@ img {
   transition: border-color 250ms var(--main-time-func);
 }
 
+.text-input:focus + .input_icon {
+  fill: var(--accent-blue-color);
+}
+
 .input_icon {
   position: absolute;
-  left: 12px;
-  top: 30px;
+  left: 5px;
+  top: 7px;
+  transform: translate(50%, 50%);
 
   transition: fill 250ms var(--main-time-func);
 }
@@ -873,9 +881,9 @@ img {
   height: 120px;
   margin-bottom: 20px;
   padding: 12px 16px;
+  resize: none;
 
   font-weight: 400;
-  font-size: 14px;
   line-height: calc(14 / 12);
   letter-spacing: 0.01em;
 
